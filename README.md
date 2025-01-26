@@ -97,3 +97,15 @@ export default tseslint.config({
   },
 })
 ```
+- Now you can install react router dom to create routing
+```bash
+npm install react-router-dom
+```
+- Install the react hook form for maintaining form in typescript smoothly
+```bash
+npm install react-hook-form
+```
+- Install the ant design ui library for design
+```bash
+npm i antd
+```
