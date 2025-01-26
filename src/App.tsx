@@ -1,10 +1,9 @@
+import MainLayout from "./components/layout/Main.Layout"
+
 function App() {
 
-  return (
-    <>
-      <h1>Programming Hero University</h1>
-    </>
-  )
+  return <MainLayout />
+
 }
 
 export default App
