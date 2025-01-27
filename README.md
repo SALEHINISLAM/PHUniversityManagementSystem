@@ -123,3 +123,8 @@ npm i jwt-decode
 ```bash
 npm i redux-persist
 ```
+
+- Install the sonner for alert notifications
+```bash
+npm install sonner
+```

@@ -15,7 +15,7 @@ export const store=configureStore({
     reducer: {
         // Define your reducers here
         [baseApi.reducerPath]:baseApi.reducer,
-        auth:authReducer,
+        auth:persistedAuthReducer,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck:{
