@@ -109,3 +109,17 @@ npm install react-hook-form
 ```bash
 npm i antd
 ```
+- Install the redux library for managing the state smoothly
+```bash
+npm install @reduxjs/toolkit react-redux
+```
+- Set up the redux library by following the instructions. link-> https://redux.js.org/tutorials/typescript-quick-start
+
+- Install the jwt decode library to decode the credential from accessToken
+```bash
+npm i jwt-decode
+```
+- Install the redux persist to persist the credential
+```bash
+npm i redux-persist
+```
