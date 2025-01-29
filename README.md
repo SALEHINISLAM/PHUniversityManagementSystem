@@ -128,3 +128,8 @@ npm i redux-persist
 ```bash
 npm install sonner
 ```
+- For validating the data install zod and hookform resolvers
+```bash
+npm i zod
+npm i @hookform/resolvers
+```

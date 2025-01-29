@@ -1,6 +1,7 @@
+import { BaseQueryApi } from "@reduxjs/toolkit/query";
 import { ReactNode } from "react";
 
-export type TUserPath={
+export type TUserPath = {
     name?: string;
     path?: string;
     element?: ReactNode;
@@ -21,3 +22,45 @@ export type TSidebarItem = {
     children?: TSidebarItem[];
 };
 
+export type TError = {
+    data: {
+        message: string;
+        stack?: string;
+        success: boolean;
+    },
+    status: number
+}
+
+export type TResponse<T> = {
+    data?: T;
+    error?: TError;
+    meta?: TMeta;
+    success: boolean;
+    message?: string;
+}
+
+export type TMeta = {
+    limit: number;
+    page: number;
+    total: number;
+    totalPage: number;
+};
+
+export type TAcademicSemester = {
+    _id: string;
+    name: string;
+    year: string;
+    code: string;
+    startMonth: string;
+    endMonth: string;
+    createdAt: string;
+    updatedAt: string;
+    __v: number;
+};
+
+export type TQueryParam = {
+    name: string;
+    value: boolean | React.Key;
+};
+
+export type TResponseRedux<T>=TResponse<T> & BaseQueryApi

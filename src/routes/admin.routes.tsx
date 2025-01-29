@@ -1,8 +1,13 @@
-import CreateAdmin from '../pages/admin/CreateAdmin';
-import CreateFaculty from '../pages/admin/CreateFaculty';
+import CreateAdmin from '../pages/admin/userManagement/CreateAdmin';
+import CreateFaculty from '../pages/admin/userManagement/CreateFaculty';
 import AdminDashboard from '../pages/admin/Dashboard';
-import CreateStudent from '../pages/admin/CreateStudent';
-import AcademicSemester from '../pages/admin/academicSemester/AcademicSemester';
+import CreateStudent from '../pages/admin/userManagement/CreateStudent';
+import AcademicSemester from '../pages/admin/academicManagement/AcademicSemester';
+import CreateAcademicSemester from '../pages/admin/academicManagement/CreateAcademicSemester';
+import CreateAcademicFaculty from '../pages/admin/academicManagement/CreateAcademicFaculty';
+import AcademicFaculty from '../pages/admin/academicManagement/AcademicFaculty';
+import CreateAcademicDepartment from '../pages/admin/academicManagement/CreateAcademicDepartment';
+import AcademicDepartment from '../pages/admin/academicManagement/AcademicDepartment';
 
 export const adminPaths = [
     {
@@ -19,9 +24,34 @@ export const adminPaths = [
         name: "Academic Management",
         children: [
             {
+                name: "Create A. Semester",
+                path: 'create-academic-semester',
+                element: <CreateAcademicSemester />,
+            },
+            {
                 name: "Academic Semester",
                 path: 'academic-semester',
                 element: <AcademicSemester />,
+            },
+            {
+                name: "Create A. Faculty",
+                path: 'create-academic-faculty',
+                element: <CreateAcademicFaculty />,
+            },
+            {
+                name: "Academic Faculty",
+                path: 'academic-faculty',
+                element: <AcademicFaculty />,
+            },
+            {
+                name: "Create A. Department",
+                path: 'create-academic-department',
+                element: <CreateAcademicDepartment />,
+            },
+            {
+                name: "Academic Department",
+                path: 'academic-department',
+                element: <AcademicDepartment />,
             },
         ]
     },
