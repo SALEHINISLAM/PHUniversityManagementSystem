@@ -2,7 +2,7 @@ import { Form, Input } from 'antd'
 import { Controller } from 'react-hook-form'
 
 type TInputProps={
-    type:string,
+    type:'text'|'password',
     name:string,
     label?:string,
 }

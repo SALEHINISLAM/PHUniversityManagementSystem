@@ -8,7 +8,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { academicSemesterSchema } from '../../../schemas/academicSemesterSchema'
 import { useAddAcademicSemesterMutation } from '../../../redux/feature/admin/academicManagement.Api'
 import { toast } from 'sonner'
-import { TResponse } from '../../../types'
+import { TAcademicSemester, TResponse } from '../../../types'
 
 const currentYear = new Date().getFullYear()
 const yearOptions = [0, 1, 2, 3, 4, 5].map(number => 
@@ -32,7 +32,7 @@ export default function CreateAcademicSemester() {
     }
     console.log(semesterData)
     try {
-      const res=await addAcademicSemester(semesterData) as TResponse
+      const res=await addAcademicSemester(semesterData) as TResponse<TAcademicSemester>
       console.log(res)
       if (res.error) {  
         toast.error(res.error?.data?.message,{id:toastId})
@@ -53,7 +53,7 @@ export default function CreateAcademicSemester() {
           <PHSelect options={yearOptions} name='year' label='Year' />
           <PHSelect options={monthOptions} name='startMonth' label='Start Month' />
           <PHSelect options={monthOptions} name='endMonth' label='End Month' />
-          <Button htmlType='submit'>Submit</Button>
+          <Button htmlType='submit'>Add</Button>
         </PHForm>
       </Col>
     </Flex>

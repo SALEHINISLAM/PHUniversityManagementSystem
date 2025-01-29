@@ -3,12 +3,6 @@ import { useState } from 'react';
 import { TAcademicSemester, TQueryParam } from '../../../types';
 import { useGetAllSemestersQuery } from '../../../redux/feature/admin/academicManagement.Api';
 
-
-export type TTableData = Pick<
-  TAcademicSemester,
-  'name' | 'year' | 'startMonth' | 'endMonth'
->;
-
 const AcademicSemester = () => {
   const [params, setParams] = useState<TQueryParam[] | undefined>(undefined);
   const {
@@ -29,6 +23,11 @@ const AcademicSemester = () => {
     })
   );
 
+  type TTableData = Pick<
+    TAcademicSemester,
+    'name' | 'year' | 'startMonth' | 'endMonth'
+  >;
+  
   const columns: TableColumnsType<TTableData> = [
     {
       title: 'Name',

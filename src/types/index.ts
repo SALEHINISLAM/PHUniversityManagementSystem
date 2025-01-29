@@ -22,8 +22,15 @@ export type TSidebarItem = {
     children?: TSidebarItem[];
 };
 
+export type TErrSources={
+    path:string;
+    message: string;
+}
+
 export type TError = {
     data: {
+        err?:object;
+        errorSources?:TErrSources[];
         message: string;
         stack?: string;
         success: boolean;
@@ -64,3 +71,20 @@ export type TQueryParam = {
 };
 
 export type TResponseRedux<T>=TResponse<T> & BaseQueryApi
+
+export type TAcademicFaculty={
+    _id: string;
+    name: string;
+    createdAt: string;
+    updatedAt: string;
+    __v: number;
+}
+
+export type TAcademicDepartment<T>={
+    _id: string;
+    name: string;
+    academicFaculty: T;
+    createdAt: string;
+    updatedAt: string;
+    __v: number;
+}
